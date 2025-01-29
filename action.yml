@@ -16,6 +16,7 @@ runs:
         python-version: '3.10'
     
     - name: Set PYTHONPATH
+      shell: bash
       run: echo "PYTHONPATH=$PYTHONPATH:/home/runner/work/barbershop/barbershop" >> $GITHUB_ENV
 
     - name: Install pipx using pip
