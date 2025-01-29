@@ -11,5 +11,6 @@ runs:
       uses: actions/checkout@v2
 
     - name: Run python tests using Pipenv
+      shell: bash
       run: pipenv run test
       
