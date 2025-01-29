@@ -10,6 +10,14 @@ runs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    -name: Install pipx using pip
+      shell: bash
+      run: pip install pipx
+
+    - name: Install Pipenv
+      shell: bash
+      run: pipx install --verbose pipenv==2023.12.1
+
     - name: Run python tests using Pipenv
       shell: bash
       run: pipenv run test
