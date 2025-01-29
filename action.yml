@@ -33,5 +33,5 @@ runs:
 
     - name: Run python tests using Pipenv
       shell: bash
-      run: pipenv run test
+      run: pipenv run test --verbose
       
