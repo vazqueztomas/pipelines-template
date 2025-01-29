@@ -1,8 +1,9 @@
 name: GitHub Actions Demo
-run-name: testing out GitHub Actions 🚀
-on: [push]
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "🎉 The job was automatically triggered by event."
+
+runs:
+  using: "composite"
+  steps: 
+    - name: Echo
+      shell: bash
+      run: echo "🎉 The job was automatically triggered by event."
+      
