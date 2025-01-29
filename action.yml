@@ -10,6 +10,11 @@ runs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
     - name: Install pipx using pip
       shell: bash
       run: pip install pipx
@@ -21,7 +26,7 @@ runs:
     - name: Install dependencies
       shell: bash
       run: pipenv install --dev --verbose
-      
+
     - name: Run python tests using Pipenv
       shell: bash
       run: pipenv run test
