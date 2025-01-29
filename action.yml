@@ -10,7 +10,7 @@ runs:
     - name: Checkout Code
       uses: actions/checkout@v2
 
-    -name: Install pipx using pip
+    - name: Install pipx using pip
       shell: bash
       run: pip install pipx
 
