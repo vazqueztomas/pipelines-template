@@ -1,9 +1,15 @@
-name: GitHub Actions Demo
+name: GitHub Actions Testing
 
 runs:
   using: "composite"
   steps: 
-    - name: Echo
+    - name: Healthcheck
       shell: bash
       run: echo "🎉 The job was automatically triggered by event."
+    
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Run python tests using Pipenv
+      uses: pipenv run test
       
